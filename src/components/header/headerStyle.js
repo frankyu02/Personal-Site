@@ -12,35 +12,12 @@ const Wrapper = styled.div`
         border-right: 1px solid black;
         position: absolute;
         visibility: hidden;
-        button{
-            width: 100%;
-            height: 100%;
-            background: white;
-            border: none;
-            cursor: pointer;
-        }
-    }
-    .CloseBtn{
-        width: 80px;
-        height: 100%;
-        border-right: 1px solid black;
-        position: absolute;
-        visibility: hidden;
-        button{
-            width: 100%;
-            height: 100%;
-            background: white;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-        }
+        padding-top: 15px;
+        padding-left: 15px;
     }
     @media (max-width: 500px){
         .OpenBtn{
-            visibility: ${props => props.isOpen ? 'hidden' : 'visible'};
-        }
-        .CloseBtn{
-            visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
+            visibility: visible;
         }
     }
 `;
@@ -76,8 +53,9 @@ const Pages = styled.div`
         height: calc(100vh - 80px);
         top: 80px;
         z-index: 100;
-        visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
-        width: 70%;
+        overflow: hidden;
+        width: ${props => props.isOpen ? '70%' : '0'};
+        transition: 0.3s;
         .linkHolder{
             width: 100%;
             height: 20%;
@@ -85,6 +63,7 @@ const Pages = styled.div`
             align-items: center;
             justify-content: center;
             border: 1px solid black;
+            visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
             & : hover{
                 transform: none;
                 a{
@@ -121,7 +100,7 @@ const Media = styled.div`
     }
     @media (max-width: 500px){
         width: calc(100% - 80px);
-        padding-left: 80px;
+        margin-left: 80px;
     }
 `;
 

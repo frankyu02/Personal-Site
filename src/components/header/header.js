@@ -1,25 +1,15 @@
 import { Link } from "gatsby";
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { SiLinkedin, SiGithub, SiDiscord } from "react-icons/si";
-import { FaExpandAlt } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
 import "@fontsource/rowdies";
 import { Media, Pages, Wrapper } from "./headerStyle";
-
+import Hamburger from 'hamburger-react';
 export default function Header(){
     const [open, setOpen] = useState(false);
-    const Open = useCallback(() => {
-        setOpen((c) => {
-            return !c;
-        });
-    }, [setOpen]);
     return(
         <Wrapper isOpen={open} >
             <div className="OpenBtn">
-                <button onClick={Open} aria-label="save"><FaExpandAlt /></button>
-            </div>
-            <div className="CloseBtn">
-                <button onClick={Open} aria-label="save"><AiOutlineClose /></button>
+                <Hamburger toggled={open} toggle={setOpen} size={48} duration={0.1}/>
             </div>
             <Pages isOpen={open}>
                 <div className= "linkHolder" ><Link to="#"> Home </Link></div>
