@@ -1,13 +1,20 @@
+require("dotenv").config({ path: ".env" })
+const{
+  SANITY_TOKEN,
+} = process.env
 module.exports = {
   siteMetadata: {
       title: `Personal Site`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: [{
+  plugins: [
+    "gatsby-plugin-styled-components", {
     resolve: 'gatsby-source-sanity',
     options: {
       "projectId": "p67lswln",
-      "dataset": "production"
+      "dataset": "production",
+      watchMode: true,
+      token: SANITY_TOKEN,
     }
   }, "gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
@@ -16,5 +23,6 @@ module.exports = {
       "path": "./src/images/"
     },
     __key: "images"
-  }]
+  },
+]
 };
