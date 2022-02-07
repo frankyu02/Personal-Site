@@ -6,7 +6,6 @@ import "@fontsource/zen-kaku-gothic-antique";
 const SmallHeroWrapper = styled.div`
     width: 100%;
     height: 450px;
-    border: 1px solid red;
     position: relative;
     margin: 0 auto;
     img{
