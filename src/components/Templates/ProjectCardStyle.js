@@ -3,10 +3,11 @@ import styled from "styled-components";
 const Wrapper = styled.div`
     border: 1px solid black;
     border-radius: 25px;
-    width: 45%;
+    width: 60%;
     height: 450px;
     display: flex;
     padding: 30px 25px;
+    margin-left: 10%;
     position: relative;
     background: rgb(23,123,145);
     background: linear-gradient(22deg, rgba(23,123,145,1) 0%, rgba(28,148,173,1) 16%, rgba(32,175,205,1) 26%, rgba(15,191,228,1) 34%, rgba(115,224,238,0.9612219887955182) 43%, rgba(237,253,255,1) 60%);
@@ -27,7 +28,7 @@ const Wrapper = styled.div`
                 font-family: "Source Sans Pro";
                 margin-top: 0;
                 font-size: 25px;
-                color: #e6e6e6;
+                color: black;
             }
             h2{
                 margin-bottom: 0;
@@ -72,8 +73,12 @@ const Wrapper = styled.div`
         bottom: 10px;
         text-align: center;
         font-size: 30px;
+        & : visited{
+            color: black;
+        }
         & : hover{
-            color: var(--green);
+            color: #8200ad;
+            transition: 0.3s;
         }
     }
     @media (max-width: 1400px){
@@ -97,17 +102,23 @@ const Wrapper = styled.div`
             }
         }        
     }
-    @media(max-width: 1400px){
+    @media(max-width: 969px){
         padding: 0;
         padding-bottom: 30px;
         width: 90%;
         height: auto;
+        min-height: 520px;
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         border-radius: 10px;
+        margin-right: 5%;
+        margin-left: 5%;
         .github{
             bottom: 0;
+            & : hover{
+                color: black;
+            }
         }
         .left{
             padding: 0;
@@ -121,7 +132,7 @@ const Wrapper = styled.div`
             }
         }
         .right{
-            width: 100%;
+            width: 99%;
         }
     }
 `;

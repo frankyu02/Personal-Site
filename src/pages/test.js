@@ -1,31 +1,40 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react"
-import ProjectCard from "../components/Templates/ProjectCard"
+import ProjectSwiper from "../components/ProjectPage/ProjectSwiper/ProjectSwiper";
 
 export default function A(){
     const data = useStaticQuery(graphql`
         query{
-            allSanityProject {
+            allSanityProjectPage {
                 nodes {
-                    language
-                    name
-                    url
-                    date(formatString: "MMMM YYYY")
-                    image {
+                    projects {
+                        language
+                        name
+                        altText
+                        date(formatString: "MMMM YYYY")
+                        description
+                        image {
+                            asset {
+                                url
+                            }
+                        }
+                        url
+                    }
+                    subtitle
+                    pageTitle
+                    banner {
                         asset {
-                            url
+                        url
                         }
                     }
-                    altText
-                    description
                 }
             }
         }
     `)
-    const projects = data.allSanityProject.nodes;
+    const projects = data.allSanityProjectPage.nodes[0].projects;
     return(
         <>
-        <ProjectCard project = {projects[0]} />
+        <ProjectSwiper projects={projects} />
         </>
     )
 }

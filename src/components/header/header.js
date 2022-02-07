@@ -12,10 +12,10 @@ export default function Header(){
                 <Hamburger toggled={open} toggle={setOpen} size={48} duration={0.1}/>
             </div>
             <Pages isOpen={open}>
-                <div className= "linkHolder" ><Link to="#"> Home </Link></div>
+                <div className= "linkHolder" ><Link to=".."> Home </Link></div>
                 <div className= "linkHolder" ><Link to="#"> About Me </Link></div>
-                <div className= "linkHolder" ><Link to="#"> Projects </Link></div>
-                <div className= "linkHolder" ><Link to="#"> Other? </Link></div>
+                <div className= "linkHolder" ><Link to="../project"> Projects </Link></div>
+                <div className= "linkHolder" ><Link to="../test"> Other? </Link></div>
                 <div className= "linkHolder" ><a 
                                                 href="https://res.cloudinary.com/dnc6bhhkf/image/upload/v1644089416/Personal%20Site/Resume-pages-deleted_ytmjc4.pdf" 
                                                 target="_Blank"
