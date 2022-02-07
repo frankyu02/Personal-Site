@@ -79,6 +79,7 @@ const Media = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background: white;
     a{
         color: black;
         font-size: 18px;

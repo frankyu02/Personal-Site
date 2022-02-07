@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
     :root{
         --blue: #0a93c4;
+        --green: #3ede89;
     }
     html {
     word-break: break-word;
