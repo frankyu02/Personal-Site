@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react"
+import SmallBanner from "../components/Global Components/SmallHero/SmallHero";
 import ProjectSwiper from "../components/ProjectPage/ProjectSwiper/ProjectSwiper";
 
 export default function A(){
@@ -31,10 +32,10 @@ export default function A(){
             }
         }
     `)
-    const projects = data.allSanityProjectPage.nodes[0].projects;
+    const info = data.allSanityProjectPage.nodes[0];
     return(
         <>
-        <ProjectSwiper projects={projects} />
+        <SmallBanner title={info.pageTitle} ImgUrl={info.banner.asset.url} subtitle={info.subtitle} />
         </>
     )
 }
