@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
     border: 1px solid black;
     border-radius: 25px;
-    width: 60%;
+    width: 75%;
     height: 450px;
     display: flex;
     padding: 30px 25px;
