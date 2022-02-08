@@ -89,7 +89,7 @@ export default function HomeHero(){
 
     React.useEffect(() => {
         const intervalID = setInterval(() =>
-            setIndex(index => index + 1), 1000);
+            setIndex(index => index + 1), 1100);
             return() => clearTimeout(intervalID);
     }, []);
     
@@ -107,7 +107,7 @@ export default function HomeHero(){
                         shadowScale: 0.2,
                     }}
                     autoplay={{
-                        delay: 750,
+                        delay: 800,
                         disableOnInteraction: false,
                     }}
                     modules={[EffectCube, Autoplay]}
@@ -128,7 +128,7 @@ export default function HomeHero(){
                         text={headertxt[index % headertxt.length]}
                         springConfig={presets.gentle}
                         className="headertext"
-                        delay={300} 
+                        delay={500} 
                         inline />
                 </h1>
             </HeroWrapper>

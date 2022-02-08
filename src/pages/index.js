@@ -1,7 +1,8 @@
 import React from "react";
+import HomeHero from "../components/Home/Hero";
 
 export default function home(){
   return(
-    <h1>Hey I'm the home page!</h1>
+    <HomeHero />
   )
 }
