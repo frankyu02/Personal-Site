@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Img from 'react-cool-img';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -6,7 +6,7 @@ import "swiper/css/effect-cube";
 import { EffectCube, Autoplay } from "swiper";
 import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import TypeAnimation from 'react-type-animation';
+import TextTransition, { presets } from "react-text-transition";
 import "@fontsource/supermercado-one";
 const HeroWrapper = styled.div`
     width: 100%;
@@ -21,13 +21,12 @@ const HeroWrapper = styled.div`
     }
     h1{
         position: absolute;
+        width: 45%;
         margin: 0;
+        padding: 0;
+        display: block;
         top: 35%;
-        margin-left: auto;
-        margin-right: 15%;
-        left: 0;
         right: 0;
-        text-align: right;
         font-family: "Supermercado One";
         font-weight: bolder;
         font-size: 70px;
@@ -51,7 +50,9 @@ const HeroWrapper = styled.div`
             width: 100px;
         }
         h1{
-            font-size: 30px;
+            width: auto;
+            margin-right: 15%;
+            font-size: 20px;
         }
     }
 `;
@@ -67,24 +68,32 @@ export default function HomeHero(){
                 }
             }
         }
-    }   
-`)
-const images = data.allSanityHomePage.nodes[0].HomepageImages;
-let headertxt = ['Frank Yu', 500,
-                'Developer', 500,
-                'Programmer', 500,
-                'Innovator', 500,
-                'Learner', 500,
-                'Christian', 500,
-                'Not a Christian', 500,
-                'Software Engineer', 500,
-                'App Creator', 500,
-                'Asian-american', 500,
-                '(because it matters)', 500,
-                'enlightened being', 1500,
-                ]
+    }     
+    `)
+    const images = data.allSanityHomePage.nodes[0].HomepageImages;
+
+    let headertxt =['Frank Yu',
+                'Developer', 
+                'Programmer',
+                'Innovator', 
+                'Learner', 
+                'Christian', 
+                'Not a Christian', 
+                'Software Engineer', 
+                'App Developer', 
+                'Asian-american', 
+                '(because it matters)', 
+                'enlightened being',
+                ];
+    const [index, setIndex] = useState(0);
+
+    React.useEffect(() => {
+        const intervalID = setInterval(() =>
+            setIndex(index => index + 1), 1000);
+            return() => clearTimeout(intervalID);
+    }, []);
+    
     return(
-        
             <HeroWrapper>
                 <Swiper
                     loop={true}
@@ -114,11 +123,14 @@ let headertxt = ['Frank Yu', 500,
                         )
                     })}
                 </Swiper>
-                <TypeAnimation 
-                cursor={false}
-                sequence={headertxt}
-                repeat={Infinity}
-                wrapper="h1" />
+                <h1>
+                    <TextTransition
+                        text={headertxt[index % headertxt.length]}
+                        springConfig={presets.gentle}
+                        className="headertext"
+                        delay={300} 
+                        inline />
+                </h1>
             </HeroWrapper>
         
     )
