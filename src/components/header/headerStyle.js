@@ -6,6 +6,8 @@ const Wrapper = styled.div`
     height: 80px;
     display: flex;
     position: sticky;
+    top: 0;
+    z-index: 200;
     .OpenBtn{
         width: 80px;
         height: 100%;
