@@ -13,7 +13,6 @@ module.exports = {
     options: {
       "projectId": "p67lswln",
       "dataset": "production",
-      watchMode: true,
       token: SANITY_TOKEN,
     }
   }, "gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
