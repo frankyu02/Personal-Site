@@ -6,11 +6,11 @@ import GlobalStyles from "../styles/GlobalStyles";
 
 export default function Layout(props){
     return(
-        <div>
+        <>
             <GlobalStyles />
             <Header />
             {props.children}
             <Footer />
-        </div>
+        </>
     )
 }
