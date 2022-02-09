@@ -24,7 +24,6 @@ const SwiperContainer = styled.div`
 `;
 
 export default function ProjectSwiper({ projects }){
-    console.log(projects);
     return(
         <SwiperContainer>
             <Swiper 

@@ -40,7 +40,7 @@ export default function A(){
             }
         }
     `)
-    console.log(data);
+    const info = data.allSanityAboutPage.nodes[0]
     return(
         <>
             <AboutCard />

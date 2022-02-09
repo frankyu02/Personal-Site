@@ -7,7 +7,6 @@ import "@fontsource/inter";
 import { Wrapper } from "./ProjectCardStyle";
 
 export default function ProjectCard({ project }){
-    console.log(project);
     let languages = project.language.join(', ');
     return(
         <Wrapper>
