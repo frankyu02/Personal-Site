@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import "@fontsource/source-sans-pro";
 const GlobalStyles = createGlobalStyle`
-    :root{
+  :root{
         --blue: #0a93c4;
         --green: #3ede89;
         --darkblue: #0c8496;
