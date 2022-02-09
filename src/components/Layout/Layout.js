@@ -14,7 +14,7 @@ const LayoutStyled = styled.div`
 export default function Layout(props){
     return(
         <>
-        <GlobalStyles />
+        <LayoutStyled />
         <Header />
         {props.children}
         <Footer />
