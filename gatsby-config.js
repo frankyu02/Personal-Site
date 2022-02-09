@@ -8,9 +8,10 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
-    "gatsby-plugin-styled-components", {
+     {
     resolve: 'gatsby-source-sanity',
     options: {
+      watchMode: !isProd,
       "projectId": "p67lswln",
       "dataset": "production",
       token: SANITY_TOKEN,
