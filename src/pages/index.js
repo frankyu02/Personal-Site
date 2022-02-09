@@ -5,8 +5,8 @@ import Welcome from "../components/Home/Welcome";
 export default function home(){
   return(
     <>
-      <HomeHero />
       <Welcome />
+      <HomeHero />
     </>
   )
 }

@@ -13,7 +13,6 @@ const HeroWrapper = styled.div`
     height: 512px;
     border: 1px solid black;
     position: relative;
-    margin-top: 80px;
     background: linear-gradient(22deg, rgba(23,123,145,1) 0%, rgba(28,148,173,1) 16%, rgba(32,175,205,1) 26%, rgba(15,191,228,1) 34%, rgba(115,224,238,0.9612219887955182) 43%, rgba(237,253,255,1) 60%);
     img{
         margin-left: 10%;
