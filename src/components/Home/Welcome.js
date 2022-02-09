@@ -75,7 +75,6 @@ export default function Welcome(){
         }
     `)
     const info = data.allSanityHomePage.nodes[0];
-    console.log(info);
     return(
         <div className="container">
             <Wrapper >
