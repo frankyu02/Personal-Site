@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 50px 0;
     h2{
         font-family: "Anton";
         color: #0c8496;
@@ -43,6 +44,21 @@ const Wrapper = styled.div`
             color: var(--green);
             background: var(--blue);
             transition: 0.2s;
+        }
+    }
+    @media (max-width: 969px){
+        margin: 0 5px;
+        width: calc(100% - 10px);
+        h2{
+            text-align: center;
+            font-size: 35px;
+        }
+        p{
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 1em;
         }
     }
 `;

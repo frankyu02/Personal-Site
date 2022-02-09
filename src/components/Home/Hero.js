@@ -45,13 +45,13 @@ const HeroWrapper = styled.div`
         height: 250px;
         img{
             margin-top: 15%;
-            margin-left: 0;
+            margin-left: 5px;
             height: 100px;
             width: 100px;
         }
         h1{
             width: auto;
-            margin-right: 15%;
+            margin-right: 5%;
             font-size: 20px;
         }
     }
@@ -66,25 +66,13 @@ export default function HomeHero(){
                         url
                     }
                 }
+                HomepageHeroText
             }
         }
     }     
     `)
     const images = data.allSanityHomePage.nodes[0].HomepageImages;
-
-    let headertxt =['Frank Yu',
-                'Developer', 
-                'Programmer',
-                'Innovator', 
-                'Learner', 
-                'Christian', 
-                'Not a Christian', 
-                'Software Engineer', 
-                'App Developer', 
-                'Asian-Canadian', 
-                '(because it matters)', 
-                'enlightened being',
-                ];
+    const text = data.allSanityHomePage.nodes[0].HomepageHeroText;
     const [index, setIndex] = useState(0);
 
     React.useEffect(() => {
@@ -125,7 +113,7 @@ export default function HomeHero(){
                 </Swiper>
                 <h1>
                     <TextTransition
-                        text={headertxt[index % headertxt.length]}
+                        text={text[index % text.length]}
                         springConfig={presets.gentle}
                         className="headertext"
                         delay={500} 
