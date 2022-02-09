@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    border: 1px solid black;
+    border: 1px solid var(--blue);
     border-radius: 25px;
     width: 75%;
     height: 450px;
@@ -72,7 +72,7 @@ const Wrapper = styled.div`
         right: 0;
         bottom: 10px;
         text-align: center;
-        font-size: 30px;
+        font-size: 50px;
         & : visited{
             color: black;
         }
@@ -98,9 +98,13 @@ const Wrapper = styled.div`
         }
         .right{
             h2{
+                text-align: center;
                 font-size: 30px;
             }
-        }        
+        }  
+        .github{
+            font-size: 30px;
+        }      
     }
     @media(max-width: 969px){
         padding: 0;

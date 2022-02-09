@@ -1,10 +1,10 @@
 import React from "react"
-import Welcome from "../components/Home/Welcome"
+import Footer from "../components/Footer/Footer"
 
 export default function A(){
     return(
         <>
-        <Welcome />
+        <p>Test Page</p>
         </>
     )
 }

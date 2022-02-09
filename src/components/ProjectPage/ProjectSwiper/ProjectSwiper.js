@@ -12,7 +12,7 @@ SwiperCore.use([Navigation, Pagination]);
 const SwiperContainer = styled.div`
     position: relative;
     overflow: visible;
-    margin-top: 80px;
+    margin: 80px 0;
     @media (max-width: 969px){
         .swiper-button-next{
             visibility: hidden;

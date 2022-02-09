@@ -8,6 +8,7 @@ const Wrapper = styled.div`
     position: sticky;
     top: 0;
     z-index: 200;
+    background: white;
     .OpenBtn{
         width: 80px;
         height: 100%;
@@ -56,7 +57,7 @@ const Pages = styled.div`
         top: 80px;
         z-index: 100;
         overflow: hidden;
-        width: ${props => props.isOpen ? '70%' : '0'};
+        width: ${props => props.isOpen ? '80%' : '0'};
         transition: 0.3s;
         .linkHolder{
             width: 100%;
