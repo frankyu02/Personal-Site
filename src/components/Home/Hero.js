@@ -83,7 +83,7 @@ export default function HomeHero(){
     
     return(
             <HeroWrapper>
-                <Swiper
+                {/* <Swiper
                     loop={true}
                     effect={"cube"}
                     grabCursor={false}
@@ -111,7 +111,7 @@ export default function HomeHero(){
                         )
                     })}
                 </Swiper>
-                {/* <h1>
+                <h1>
                     <TextTransition
                         text={text[index % text.length]}
                         springConfig={presets.gentle}
