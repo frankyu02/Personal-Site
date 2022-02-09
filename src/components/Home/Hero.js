@@ -82,44 +82,44 @@ export default function HomeHero(){
     }, []);
     
     return(
-            <HeroWrapper>
-                {/* <Swiper
-                    loop={true}
-                    effect={"cube"}
-                    grabCursor={false}
-                    centeredSlides={true}
-                    cubeEffect={{
-                        shadow: false,
-                        slideShadows: false,
-                        shadowOffset: 20,
-                        shadowScale: 0.2,
-                    }}
-                    autoplay={{
-                        delay: 800,
-                        disableOnInteraction: false,
-                    }}
-                    modules={[EffectCube, Autoplay]}
-                    className="homepage swiper"
-                >
-                    {images.map((image, index) => {
-                        return(
-                            <SwiperSlide
-                                key={index}
-                                virtualIndex={index}>
-                                    <Img src = {image.asset.url} alt={'image'} />
-                                </SwiperSlide>
-                        )
-                    })}
-                </Swiper>
-                <h1>
-                    <TextTransition
-                        text={text[index % text.length]}
-                        springConfig={presets.gentle}
-                        className="headertext"
-                        delay={500} 
-                        inline />
-                </h1> */}
-            </HeroWrapper>
-        
+        <h1>Hey Im the Home page</h1>
+            // <HeroWrapper>
+            //     <Swiper
+            //         loop={true}
+            //         effect={"cube"}
+            //         grabCursor={false}
+            //         centeredSlides={true}
+            //         cubeEffect={{
+            //             shadow: false,
+            //             slideShadows: false,
+            //             shadowOffset: 20,
+            //             shadowScale: 0.2,
+            //         }}
+            //         autoplay={{
+            //             delay: 800,
+            //             disableOnInteraction: false,
+            //         }}
+            //         modules={[EffectCube, Autoplay]}
+            //         className="homepage swiper"
+            //     >
+            //         {images.map((image, index) => {
+            //             return(
+            //                 <SwiperSlide
+            //                     key={index}
+            //                     virtualIndex={index}>
+            //                         <Img src = {image.asset.url} alt={'image'} />
+            //                     </SwiperSlide>
+            //             )
+            //         })}
+            //     </Swiper>
+            //     <h1>
+            //         <TextTransition
+            //             text={text[index % text.length]}
+            //             springConfig={presets.gentle}
+            //             className="headertext"
+            //             delay={500} 
+            //             inline />
+            //     </h1>
+            // </HeroWrapper>
     )
 }
