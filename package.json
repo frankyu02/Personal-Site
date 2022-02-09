@@ -24,7 +24,7 @@
     "babel-plugin-styled-components": "^2.0.2",
     "dotenv": "^16.0.0",
     "gatsby": "^4.6.2",
-    "gatsby-cli": "^4.6.1",
+    "gatsby-cli": "^4.7.0",
     "gatsby-plugin-image": "^2.6.0",
     "gatsby-plugin-netlify": "^4.1.0",
     "gatsby-plugin-sharp": "^4.6.0",
