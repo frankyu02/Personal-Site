@@ -16,7 +16,6 @@ export default function Layout(props){
         <>
         <LayoutStyled />
         <GlobalStyles />
-        <Header />
         {props.children}
         <Footer />
         </>
