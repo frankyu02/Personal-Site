@@ -81,7 +81,7 @@ export default function HomeHero(){
                 'Not a Christian', 
                 'Software Engineer', 
                 'App Developer', 
-                'Asian-american', 
+                'Asian-Canadian', 
                 '(because it matters)', 
                 'enlightened being',
                 ];

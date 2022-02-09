@@ -3,6 +3,7 @@ const GlobalStyles = createGlobalStyle`
     :root{
         --blue: #0a93c4;
         --green: #3ede89;
+        --darkblue: #0c8496;
     }
     html {
     word-break: break-word;
