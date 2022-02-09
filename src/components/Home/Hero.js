@@ -82,7 +82,7 @@ export default function HomeHero(){
     
     return(
             <HeroWrapper>
-                <Swiper
+                {/* <Swiper
                     loop={true}
                     
                     grabCursor={false}
@@ -111,7 +111,7 @@ export default function HomeHero(){
                         className="headertext"
                         delay={500} 
                         inline />
-                </h1>
+                </h1> */}
             </HeroWrapper>
     )
 }
