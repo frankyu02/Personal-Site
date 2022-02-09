@@ -13,12 +13,12 @@ const LayoutStyled = styled.div`
 `;
 export default function Layout(props){
     return(
-        <>
+        <div>
         <LayoutStyled />
         <GlobalStyles />
         <Header />
         {props.children}
         <Footer />
-        </>
+        </div>
     )
 }
