@@ -6,11 +6,6 @@ const GlobalStyles = createGlobalStyle`
         --green: #3ede89;
         --darkblue: #0c8496;
     }
-  html {
-    word-break: break-word;
-    font-size: 10px;
-    background-color: var(--white);
-  }
   footer{
     text-align: center;
     font-family: "Source Sans Pro";
