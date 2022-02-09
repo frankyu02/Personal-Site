@@ -111,14 +111,14 @@ export default function HomeHero(){
                         )
                     })}
                 </Swiper>
-                <h1>
+                {/* <h1>
                     <TextTransition
                         text={text[index % text.length]}
                         springConfig={presets.gentle}
                         className="headertext"
                         delay={500} 
                         inline />
-                </h1>
+                </h1> */}
             </HeroWrapper>
         
     )
