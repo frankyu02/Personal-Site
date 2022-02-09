@@ -2,8 +2,8 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import { Fade, Slide } from "react-awesome-reveal";
-import "@fontsource/inter";
 import "@fontsource/anton";
+import "@fontsource/inter";
 import "@fontsource/rowdies";
 import TypeAnimation from 'react-type-animation';
 const Wrapper = styled.div`
