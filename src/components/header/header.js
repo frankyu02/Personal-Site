@@ -13,7 +13,7 @@ export default function Header(){
             </div>
             <Pages isOpen={open}>
                 <div className= "linkHolder" ><Link to=".."> Home </Link></div>
-                <div className= "linkHolder" ><Link to="#"> About Me </Link></div>
+                <div className= "linkHolder" ><Link to="../about"> About Me </Link></div>
                 <div className= "linkHolder" ><Link to="../project"> Projects </Link></div>
                 <div className= "linkHolder" ><Link to="../test"> Other? </Link></div>
                 <div className= "linkHolder" ><a 

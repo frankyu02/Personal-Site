@@ -83,7 +83,7 @@ export default function Welcome(){
                     <h2>{info.welcomeTitle}</h2>
                     <p>{info.welcomeText}</p>
                 </Slide>
-                <Fade delay={1000}>
+                <Fade>
                     <Link to="../about">
                         <TypeAnimation 
                             cursor={true}
