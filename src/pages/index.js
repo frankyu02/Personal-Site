@@ -6,7 +6,6 @@ export default function home(){
   return(
     <>
       <Welcome />
-      <HomeHero />
     </>
   )
 }
