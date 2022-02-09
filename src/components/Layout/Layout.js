@@ -5,7 +5,7 @@ import Header from "../header/header";
 import GlobalStyles from "../styles/GlobalStyles";
 
 const LayoutStyled = styled.div`
-    background: rgba(237,253,255,1);
+    background: #EDFDFF;
     position: fixed;
     z-index: -2;
     width: 100vw;
