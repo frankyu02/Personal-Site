@@ -2,6 +2,7 @@ require("dotenv").config({ path: ".env" })
 const{
   SANITY_TOKEN,
 } = process.env
+const isProd = process.env.NODE_ENV === "production"
 module.exports = {
   siteMetadata: {
       title: `Personal Site`,
