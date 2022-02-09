@@ -5,10 +5,10 @@ import { Background } from "../components/styles/background";
 
 export default function home(){
   return(
-    <>
+    <div>
       <Background></Background>
       <HomeHero />
       <Welcome />
-    </>
+    </div>
   )
 }
