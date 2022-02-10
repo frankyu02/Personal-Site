@@ -19,7 +19,7 @@ export default function Header(){
                 <div className= "linkHolder" ><a 
                                                 href="https://res.cloudinary.com/dnc6bhhkf/image/upload/v1644089416/Personal%20Site/Resume-pages-deleted_ytmjc4.pdf" 
                                                 target="_Blank"
-                                                rel="noreferrer"> Resume 
+                                                rel="noreferrer"> Résumé 
                                                 </a>
                 </div>
             </Pages>

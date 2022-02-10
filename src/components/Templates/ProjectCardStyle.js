@@ -33,7 +33,7 @@ const Wrapper = styled.div`
             h2{
                 margin-bottom: 0;
                 margin-top: 0;
-                font-family: anton;
+                font-family: "Anton";
                 font-style: italic;
                 font-size: 30px;
             }
