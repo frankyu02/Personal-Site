@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import SmallBanner from "../components/Global Components/SmallHero/SmallHero";
 import AboutCard from "../components/About/AboutCard";
+import Status from "../components/About/AboutStatus";
 
 export default function About(){
     const data = useStaticQuery(graphql`
@@ -60,6 +61,7 @@ export default function About(){
             text={info.paragraph3}
             imgurl={info.image3.asset.url}
         />
+        <Status />
         </>
     )
 }
