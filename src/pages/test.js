@@ -43,7 +43,11 @@ export default function A(){
     const info = data.allSanityAboutPage.nodes[0]
     return(
         <>
-            <AboutCard />
+            <AboutCard 
+            title={info.title1}
+            text={info.paragraph1}
+            imgurl={info.image1.asset.url}
+            />
         </>
     )
 }
