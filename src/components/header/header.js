@@ -17,7 +17,7 @@ export default function Header(){
                 <div className= "linkHolder" ><Link to="../project"> Projects </Link></div>
                 <div className= "linkHolder" ><Link to="../misc"> Other? </Link></div>
                 <div className= "linkHolder" ><a 
-                                                href="https://res.cloudinary.com/dnc6bhhkf/image/upload/v1644089416/Personal%20Site/Resume-pages-deleted_ytmjc4.pdf" 
+                                                href="https://res.cloudinary.com/dz6slmbee/image/upload/v1644534282/Personal%20Site/resume_jablno.pdf" 
                                                 target="_Blank"
                                                 rel="noreferrer"> Résumé 
                                                 </a>
