@@ -7,11 +7,10 @@ import { Slide, Zoom } from "react-awesome-reveal";
 const AboutCardWrapper = styled.div`
     width: 100%;
     height: 512px;
-    border: 1px solid black;
+    border: 1px solid var(--lightblue);
     display: flex;
     flex-direction: ${props => props.direction || 'row'};
     margin: 30px 0;
-    background: white;
     .image{
         width: 50%;
         img{

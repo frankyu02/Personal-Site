@@ -29,7 +29,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-size: 2rem;
     &::-webkit-scrollbar {
-    width: 10px;               /* width of the entire scrollbar */
+    width: 5px;               /* width of the entire scrollbar */
     }
 
     &::-webkit-scrollbar-track {
