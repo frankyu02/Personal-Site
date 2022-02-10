@@ -22,7 +22,7 @@ const SmallHeroWrapper = styled.div`
         right: 0;
         top: 18%;
         text-align: center;
-        color: white;
+        color: ${props => props.color || 'white'};
         font-family: "Zen Kaku Gothic Antique";
         font-size: 80px;
         font-style: italic;
@@ -42,10 +42,10 @@ const SmallHeroWrapper = styled.div`
     }
 `;
 
-export default function SmallBanner({ title, ImgUrl, subtitle }){
+export default function SmallBanner({ title, ImgUrl, subtitle, color }){
     return(
         <div className="container">
-            <SmallHeroWrapper>          
+            <SmallHeroWrapper color={color}>          
                 <Img src={ImgUrl} alt="banner" />
                 <TypeAnimation 
                 cursor={false}

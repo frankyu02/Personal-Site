@@ -5,7 +5,13 @@ const GlobalStyles = createGlobalStyle`
         --blue: #0a93c4;
         --green: #3ede89;
         --darkblue: #0c8496;
+        --lightblue: rgba(237,253,255,1);
     }
+  html {
+    word-break: break-word;
+    font-size: 10px;
+    background-color: var(--lightblue);
+  }
   footer{
     text-align: center;
     font-family: "Source Sans Pro";
@@ -22,8 +28,18 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-size: 2rem;
-    scrollbar-width: thin;
-    scrollbar-color: #0a93c4 #EEEEEF;
+    &::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--lightblue);        /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--blue);    /* color of the scroll thumb */
+      border: 3px solid var(--darkblue);  /* creates padding around scroll thumb */
+    }
   }
   * {
     box-sizing: border-box;
