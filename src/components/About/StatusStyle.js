@@ -23,7 +23,7 @@ const StatusWrapper = styled.div`
             left: 0;
             right: 0;
             text-align: center;
-            font-family: "supermercado One";
+            font-family: "Supermercado One";
             font-style: italic;
         }
         .item{
@@ -42,7 +42,7 @@ const StatusWrapper = styled.div`
                 text-decoration: underline;
                 position: absolute;
                 left: 60%;
-                font-family: "supermercado One";
+                font-family: "Supermercado One";
             }
         }
     }

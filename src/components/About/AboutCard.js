@@ -82,7 +82,7 @@ export default function AboutCard({ title, text, imgurl, orientation }){
             <AboutCardWrapper direction={orientation}>
                 
                 <div className="image">
-                    <Slide direction={direction} style={{width: '100%'}, {height: '100%'}}>
+                    <Slide direction={direction} style={{height: '100%'}}>
                         <Img src={imgurl} alt={'about image'} /> 
                     </Slide>  
                 </div>

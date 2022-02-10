@@ -2,8 +2,8 @@ import React from "react";
 import {  SiGithub } from "react-icons/si";
 import Img from "react-cool-img";
 import "@fontsource/anton";
-import "@fontsource/source-sans-pro";
 import "@fontsource/inter";
+import "@fontsource/source-sans-pro";
 import { Wrapper } from "./ProjectCardStyle";
 
 export default function ProjectCard({ project }){

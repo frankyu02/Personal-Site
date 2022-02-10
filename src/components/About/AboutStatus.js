@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 import { graphql, useStaticQuery } from "gatsby";
-import "@fontsource/supermercado-one";
 import "@fontsource/rowdies";
+import "@fontsource/supermercado-one";
 import { StatusWrapper } from "./StatusStyle";
 
 export default function Status(){
