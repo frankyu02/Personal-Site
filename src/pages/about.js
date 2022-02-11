@@ -43,7 +43,7 @@ export default function About(){
     `)
     const info = data.allSanityAboutPage.nodes[0]
     return(
-        <>
+        <div>
         <SmallBanner title={info.pageTitle} ImgUrl={info.banner.asset.url} subtitle={info.subtitle} color={'black'}/>
         <AboutCard 
             title={info.title1}
@@ -62,6 +62,6 @@ export default function About(){
             imgurl={info.image3.asset.url}
         />
         <Status />
-        </>
+        </div>
     )
 }
