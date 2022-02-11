@@ -1,25 +1,32 @@
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { SiLinkedin, SiGithub, SiDiscord } from "react-icons/si";
 import "@fontsource/rowdies";
 import { Media, Pages, Wrapper } from "./headerStyle";
 import Hamburger from 'hamburger-react';
 export default function Header(){
     const [open, setOpen] = useState(false);
+    const closePage = useCallback(() => {
+        setOpen((c) => {
+            return !c;
+        });
+    }, [setOpen]);
     return(
         <Wrapper isOpen={open} >
             <div className="OpenBtn">
                 <Hamburger toggled={open} toggle={setOpen} size={48} duration={0.1}/>
             </div>
             <Pages isOpen={open}>
-                <div className= "linkHolder" ><Link to=".."> Home </Link></div>
-                <div className= "linkHolder" ><Link to="../about"> About Me </Link></div>
-                <div className= "linkHolder" ><Link to="../project"> Projects </Link></div>
-                <div className= "linkHolder" ><Link to="../misc"> Other? </Link></div>
+                <div className= "linkHolder" ><Link to=".." onClick={closePage}> Home </Link></div>
+                <div className= "linkHolder" ><Link to="../about " onClick={closePage}> About Me </Link></div>
+                <div className= "linkHolder" ><Link to="../project" onClick={closePage}> Projects </Link></div>
+                <div className= "linkHolder" ><Link to="../misc" onClick={closePage}> Other? </Link></div>
                 <div className= "linkHolder" ><a 
                                                 href="https://res.cloudinary.com/dz6slmbee/image/upload/v1644534282/Personal%20Site/resume_jablno.pdf" 
                                                 target="_Blank"
-                                                rel="noreferrer"> Résumé 
+                                                rel="noreferrer"
+                                                onClick={closePage}> 
+                                                Résumé 
                                                 </a>
                 </div>
             </Pages>

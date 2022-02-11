@@ -35,9 +35,9 @@ export default function Projects(){
     const projects = data.allSanityProjectPage.nodes[0].projects;
     const info = data.allSanityProjectPage.nodes[0];
     return(
-        <>
+        <div>
         <SmallBanner title={info.pageTitle} ImgUrl={info.banner.asset.url} subtitle={info.subtitle} />
         <ProjectSwiper projects={projects} />
-        </>
+        </div>
     )
 }
