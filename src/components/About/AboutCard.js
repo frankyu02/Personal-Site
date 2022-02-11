@@ -48,7 +48,7 @@ const AboutCardWrapper = styled.div`
     }
     @media(max-width: 500px){
         flex-direction: column;
-        height: 70vh;
+        height: auto;
         .image{
             width: 100%;
             height: 40%;
