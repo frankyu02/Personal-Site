@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import SmallBanner from "../components/Global Components/SmallHero/SmallHero";
 import AboutCard from "../components/About/AboutCard";
 import Status from "../components/About/AboutStatus";
+import SEO from "../components/SEO";
 
 export default function About(){
     const data = useStaticQuery(graphql`
@@ -44,24 +45,25 @@ export default function About(){
     const info = data.allSanityAboutPage.nodes[0]
     return(
         <div>
-        <SmallBanner title={info.pageTitle} ImgUrl={info.banner.asset.url} subtitle={info.subtitle} color={'black'}/>
-        <AboutCard 
-            title={info.title1}
-            text={info.paragraph1}
-            imgurl={info.image1.asset.url}
-        />
-        <AboutCard 
-            title={info.title2}
-            text={info.paragraph2}
-            imgurl={info.image2.asset.url}
-            orientation={'row-reverse'}
-        />
-        <AboutCard 
-            title={info.title3}
-            text={info.paragraph3}
-            imgurl={info.image3.asset.url}
-        />
-        <Status />
+            <SEO title="About Me" description='Just a little about me'/>
+            <SmallBanner title={info.pageTitle} ImgUrl={info.banner.asset.url} subtitle={info.subtitle} color={'black'}/>
+            <AboutCard 
+                title={info.title1}
+                text={info.paragraph1}
+                imgurl={info.image1.asset.url}
+            />
+            <AboutCard 
+                title={info.title2}
+                text={info.paragraph2}
+                imgurl={info.image2.asset.url}
+                orientation={'row-reverse'}
+            />
+            <AboutCard 
+                title={info.title3}
+                text={info.paragraph3}
+                imgurl={info.image3.asset.url}
+            />
+            <Status />
         </div>
     )
 }

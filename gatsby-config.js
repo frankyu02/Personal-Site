@@ -5,20 +5,13 @@ const{
 const isProd = process.env.NODE_ENV === "production"
 module.exports = {
   siteMetadata: {
-      title: `Personal Site`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Frank Yu Personal Site`,
+    siteUrl: `https://frank-yu.netlify.app/`,
+    description: 'Personal Site of Frank Yu'
   },
   plugins: [
-    `gatsby-plugin-image`,
-    'gatsby-plugin-sharp', 
-    'gatsby-transformer-sharp', 
+    "gatsby-plugin-styled-components", 
     {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        disableVendorPrefixes: true
-      }
-    },
-     {
     resolve: 'gatsby-source-sanity',
     options: {
       watchMode: !isProd,
@@ -26,7 +19,7 @@ module.exports = {
       "dataset": "production",
       token: SANITY_TOKEN,
     }
-  }, 
+  }, "gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", `gatsby-plugin-react-helmet`,
   {
     resolve: 'gatsby-source-filesystem',
     options: {
