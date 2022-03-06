@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import SmallBanner from "../components/Global Components/SmallHero/SmallHero";
 import ProjectSwiper from "../components/ProjectPage/ProjectSwiper/ProjectSwiper";
+import SEO from "../components/SEO";
 
 export default function Projects(){
     const data = useStaticQuery(graphql`
@@ -36,8 +37,9 @@ export default function Projects(){
     const info = data.allSanityProjectPage.nodes[0];
     return(
         <div>
-        <SmallBanner title={info.pageTitle} ImgUrl={info.banner.asset.url} subtitle={info.subtitle} />
-        <ProjectSwiper projects={projects} />
+            <SEO title="My Projects" description="What ive been working on"/>
+            <SmallBanner title={info.pageTitle} ImgUrl={info.banner.asset.url} subtitle={info.subtitle} />
+            <ProjectSwiper projects={projects} />
         </div>
     )
 }

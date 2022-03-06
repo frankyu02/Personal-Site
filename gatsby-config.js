@@ -4,11 +4,13 @@ const{
 } = process.env
 module.exports = {
   siteMetadata: {
-      title: `Personal Site`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Frank Yu Personal Site`,
+    siteUrl: `https://frank-yu.netlify.app/`,
+    description: 'Personal Site of Frank Yu'
   },
   plugins: [
-    "gatsby-plugin-styled-components", {
+    "gatsby-plugin-styled-components", 
+    {
     resolve: 'gatsby-source-sanity',
     options: {
       "projectId": "p67lswln",
@@ -16,7 +18,8 @@ module.exports = {
       watchMode: true,
       token: SANITY_TOKEN,
     }
-  }, "gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  }, "gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", `gatsby-plugin-react-helmet`,
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
