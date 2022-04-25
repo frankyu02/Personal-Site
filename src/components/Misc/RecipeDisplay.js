@@ -92,7 +92,7 @@ export default function RecipeDisplay({recipe}){
                     <p><span>Cooktime:</span> {recipe.readyInMinutes} Minutes</p>
                     <p><span>Recipe Serves: </span>{recipe.servings}</p>
                     {recipe.diets.length > 0 && 
-                    <p><span>Diets:</span> {recipe.diets.join(',')} </p> 
+                    <p><span>Diets:</span> {recipe.diets.join(', ')} </p> 
                     }
                     {recipe.vegetarian && 
                     <p><FaLeaf /> Vegetarian</p>
@@ -120,7 +120,7 @@ export default function RecipeDisplay({recipe}){
                     <div className="Directions">
                         <h2>Instructions</h2>
                         <ol type="1">
-                            {recipe.analyzedInstructions[0].steps.map((step) => {
+                            {recipe.analyzedInstructions[0].steps?.map((step) => {
                                 return(
                                     <li>{step.step}</li>
                                 )

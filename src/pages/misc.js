@@ -29,8 +29,15 @@ export default function A(){
                     <AwesomeButtonProgress
                      type="primary"
                      action={(element, next) => {
-                         getRecipe();
-                         next();
+                        //  getRecipe();
+                        //  next();
+                        fetch('https://api.spoonacular.com/recipes/random?apiKey=3d5ee971653049b698198efc9aaac317&tags=dinner,main')
+                        .then(response => response.json())
+                        .then(data =>{
+                        console.log('DATA', data.recipes[0]);
+                        setRecipe(data.recipes[0]);
+                        next();
+                        })
                       }}
                       loadingLabel="Fetching .."
                      >
