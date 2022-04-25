@@ -82,13 +82,13 @@ export default function AboutCard({ title, text, imgurl, orientation }){
             <AboutCardWrapper direction={orientation}>
                 
                 <div className="image">
-                    <Slide direction={direction} style={{height: '100%'}}>
+                    <Slide direction={direction} style={{height: '100%'}} triggerOnce>
                         <Img src={imgurl} alt={'about image'} /> 
                     </Slide>  
                 </div>
                
                 <div className="content">
-                <Zoom>
+                <Zoom triggerOnce> 
                     <h2>{title}</h2>
                     <p>{text}</p>
                  </Zoom>
