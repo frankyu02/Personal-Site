@@ -1,35 +1,47 @@
-import React from "react"
+import React, { useState } from "react"
 import "@fontsource/rowdies";
 import styled from "styled-components";
-import Quantity from "../components/Misc/Quantity";
+import { AwesomeButtonProgress } from 'react-awesome-button';
+import 'react-awesome-button/dist/themes/theme-blue.css';
 import SEO from "../components/SEO";
+import RecipeDisplay from "../components/Misc/RecipeDisplay";
 const Wrapper = styled.div`
     width: 100%;
-    h2{
-        font-size: 60px;
-        font-family: 'Rowdies';
-    }
-    p{
-        line-height: 200%;
-    }
-    @media(max-width: 500px){
-        width: calc(100% - 10px);
-        margin-left: 5px;
-        margin-right: 5px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
 `;
 export default function A(){
+    const [recipe, setRecipe] = useState();
+    function getRecipe(){
+        fetch('https://api.spoonacular.com/recipes/random?apiKey=3d5ee971653049b698198efc9aaac317&tags=dinner,main').then(response => response.json()).then(data =>{
+            console.log('DATA', data.recipes[0]);
+            setRecipe(data.recipes[0]);
+        })
+    }
     return(
         <>
-            <SEO title="Unknown" description="I wonder what this page will be"/>
+            <SEO title="Recipe Generator" description="Fetch me a random recipe"/>
             <div className="container">
                 <Wrapper>
-                    <h2>Welcome to... uh</h2>
-                    <p>honestly I have no clue what this page is for. I just thought design wise having 5 options in the header looks much better than 4.<br />
-                        Maybe I'll start blogging and turn this page into one that displays those blog posts but uh... <br />
-                        for now I present to you a counter so you can have some fun here i guess...
-                    </p>
-                    <Quantity />
+                    <AwesomeButtonProgress
+                     type="primary"
+                     action={(element, next) => {
+                         getRecipe();
+                         next();
+                      }}
+                      loadingLabel="Fetching .."
+                     >
+                        Find me a Random Recipe
+                    </AwesomeButtonProgress>
+                    {recipe && 
+                    <>
+                        <h1>{recipe.title}</h1> 
+                        <RecipeDisplay recipe={recipe} />
+                    </>
+                    }
                 </Wrapper>
             </div>
         </>
