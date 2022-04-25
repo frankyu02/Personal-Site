@@ -12,6 +12,19 @@ const Wrapper = styled.div`
     align-items: center;
     padding-top: 50px;
     margin-bottom: 50px;
+    .readmore{
+        text-decoration: none;
+        font-size: 25px;
+        &:visited{
+            color: var(--blue);
+        }
+        &:hover{
+            font-style: italic;
+            color: var(--green);
+            transition: 0.2s;
+            text-decoration:underline;
+        }
+    }
 `;
 export default function A(){
     const [recipe, setRecipe] = useState();
@@ -47,6 +60,7 @@ export default function A(){
                     <>
                         <h1>{recipe.title}</h1> 
                         <RecipeDisplay recipe={recipe} />
+                        <a className="readmore" href={recipe.sourceUrl} target="_blank">Read More</a>
                     </>
                     }
                 </Wrapper>
