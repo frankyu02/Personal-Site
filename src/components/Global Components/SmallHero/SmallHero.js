@@ -3,6 +3,7 @@ import Img from 'react-cool-img';
 import styled from 'styled-components';
 import TypeAnimation from 'react-type-animation';
 import "@fontsource/zen-kaku-gothic-antique";
+import loadingImg from './1484.gif';
 const SmallHeroWrapper = styled.div`
     width: 100%;
     height: 450px;
@@ -46,7 +47,7 @@ export default function SmallBanner({ title, ImgUrl, subtitle, color }){
     return(
         <div className="container">
             <SmallHeroWrapper color={color}>          
-                <Img src={ImgUrl} alt="banner" />
+                <Img src={ImgUrl} alt="banner" placeholder={loadingImg}/>
                 <TypeAnimation 
                 cursor={false}
                 sequence={[title , 2000, '', 250, subtitle, 2000,]}

@@ -73,10 +73,10 @@ const Wrapper = styled.div`
         bottom: 10px;
         text-align: center;
         font-size: 50px;
-        & : visited{
+        &:visited{
             color: black;
         }
-        & : hover{
+        &:hover{
             color: #8200ad;
             transition: 0.3s;
         }
@@ -120,7 +120,7 @@ const Wrapper = styled.div`
         margin-left: 5%;
         .github{
             bottom: 0;
-            & : hover{
+            &:hover{
                 color: black;
             }
         }

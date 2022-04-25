@@ -25,7 +25,8 @@ export default function ProjectCard({ project }){
                 <h2>{project.name}</h2>
                 <p className= "description">{project.description}</p>
             </div>
-            <a className="github" aria-label="Github Link" href={project.url} target="_blank" rel="noreferrer"><SiGithub /></a>
+            {project.url &&
+            <a className="github" aria-label="Github Link" href={project.url} target="_blank" rel="noreferrer"><SiGithub /></a>}
         </Wrapper>
     )
 }
