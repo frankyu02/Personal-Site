@@ -32,6 +32,9 @@ const Wrapper = styled.div`
             padding-left: 10%;
             padding-right: 5%;
         }
+        h2{
+            margin-bottom: 0;
+        }
         .summary{
             overflow: auto;
         }
@@ -103,6 +106,7 @@ export default function RecipeDisplay({recipe}){
                     {recipe.glutenFree && 
                     <p><GiWheat /> Gluten Free</p>
                     }
+                    <br></br>
                     <p className="summary" dangerouslySetInnerHTML={{__html: recipe.summary}}/>
                 </div>
             </div>
@@ -112,7 +116,7 @@ export default function RecipeDisplay({recipe}){
                         <ul>
                             {recipe.extendedIngredients.map((item) =>{
                                 return(
-                                    <li>{item.measures["metric"].amount}{item.measures["metric"].unitShort} {item.name}</li>
+                                    <li>{parseFloat(item.measures["metric"].amount.toFixed(2))} {item.measures["metric"].unitShort} {item.name}</li>
                                 )
                             })}
                         </ul>
@@ -122,7 +126,7 @@ export default function RecipeDisplay({recipe}){
                         <ol type="1">
                             {recipe.analyzedInstructions[0].steps?.map((step) => {
                                 return(
-                                    <li>{step.step}</li>
+                                    <li>{step.step}<br /><br /></li>
                                 )
                             })}
                         </ol>
