@@ -83,12 +83,8 @@ export default function Welcome(){
                     <p>{info.welcomeText}</p>
                 </Slide>
                 <Fade>
-                    <Link to="../about">
-                        <TypeAnimation 
-                            cursor={true}
-                            sequence={['Read More...' , 2000, '', 250]}
-                            repeat={Infinity}
-                            wrapper="a" />
+                    <Link to="/about">
+                        Read More...
                     </Link>
                 </Fade>
             </Wrapper>
