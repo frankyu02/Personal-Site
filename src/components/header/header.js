@@ -4,6 +4,7 @@ import { SiLinkedin, SiGithub, SiDiscord } from "react-icons/si";
 import "@fontsource/rowdies";
 import { Media, Pages, Wrapper } from "./headerStyle";
 import Hamburger from 'hamburger-react';
+import pdf from './resume.pdf'
 export default function Header(){
     const [open, setOpen] = useState(false);
     const closePage = useCallback(() => {
@@ -21,11 +22,10 @@ export default function Header(){
                 <div className= "linkHolder" ><Link to="../about " onClick={closePage}> About Me </Link></div>
                 <div className= "linkHolder" ><Link to="../project" onClick={closePage}> Projects </Link></div>
                 <div className= "linkHolder" ><Link to="../misc" onClick={closePage}> Dinner Plans </Link></div>
-                <div className= "linkHolder" ><a 
-                                                href="https://res.cloudinary.com/dz6slmbee/image/upload/v1644534282/Personal%20Site/resume_jablno.pdf" 
-                                                target="_Blank"
-                                                rel="noreferrer"
-                                                onClick={closePage}> 
+                <div className= "linkHolder" ><a onClick={()=>{
+                    closePage();
+                    window.open(pdf, '_blank');
+                }}> 
                                                 Résumé 
                                                 </a>
                 </div>
