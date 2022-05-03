@@ -22,12 +22,13 @@ export default function Header(){
                 <div className= "linkHolder" ><Link to="../about " onClick={closePage}> About Me </Link></div>
                 <div className= "linkHolder" ><Link to="../project" onClick={closePage}> Projects </Link></div>
                 <div className= "linkHolder" ><Link to="../misc" onClick={closePage}> Dinner Plans </Link></div>
-                <div className= "linkHolder" ><a onClick={()=>{
-                    closePage();
-                    window.open(pdf, '_blank');
-                }}> 
-                                                Résumé 
-                                                </a>
+                <div className= "linkHolder" >
+                    <a onClick={()=>{
+                        closePage();
+                        window.open(pdf, '_blank');
+                    }}> 
+                        Résumé 
+                    </a>
                 </div>
             </Pages>
             <Media>
