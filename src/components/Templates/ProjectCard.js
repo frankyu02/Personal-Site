@@ -23,7 +23,7 @@ export default function ProjectCard({ project }){
             <div className="right">
                 <p className="date">{project.date}</p>
                 <h2>{project.name}</h2>
-                <p className= "description">{project.description}</p>
+                <p className= "description" dangerouslySetInnerHTML={{__html: project.description}} />
             </div>
             {project.url &&
             <a className="github" aria-label="Github Link" href={project.url} target="_blank" rel="noreferrer"><SiGithub /></a>}
