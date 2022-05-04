@@ -1,5 +1,6 @@
 import React from "react";
 import {  SiGithub } from "react-icons/si";
+import { AiOutlineLink } from "react-icons/ai";
 import Img from "react-cool-img";
 import "@fontsource/anton";
 import "@fontsource/inter";
@@ -25,8 +26,11 @@ export default function ProjectCard({ project }){
                 <h2>{project.name}</h2>
                 <p className= "description" dangerouslySetInnerHTML={{__html: project.description}} />
             </div>
-            {project.url &&
-            <a className="github" aria-label="Github Link" href={project.url} target="_blank" rel="noreferrer"><SiGithub /></a>}
+            {project.url.includes('github.com') ?
+            <a className="github" aria-label="Github Link" href={project.url} target="_blank" rel="noreferrer"><SiGithub /></a>
+            :
+            <a className="github" aria-label="Github Link" href={project.url} target="_blank" rel="noreferrer"><AiOutlineLink /></a>
+            }
         </Wrapper>
     )
 }
