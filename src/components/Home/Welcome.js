@@ -78,11 +78,11 @@ export default function Welcome(){
     return(
         <div className="container">
             <Wrapper >
-                <Slide cascade>
+                <Fade cascade>
                     <h2>{info.welcomeTitle}</h2>
                     <p>{info.welcomeText}</p>
-                </Slide>
-                <Fade>
+                </Fade>
+                <Fade triggerOnce>
                     <Link to="/about">
                         Read More...
                     </Link>
