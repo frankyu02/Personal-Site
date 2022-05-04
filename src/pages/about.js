@@ -4,7 +4,6 @@ import SmallBanner from "../components/Global Components/SmallHero/SmallHero";
 import AboutCard from "../components/About/AboutCard";
 import Status from "../components/About/AboutStatus";
 import SEO from "../components/SEO";
-
 export default function About(){
     const data = useStaticQuery(graphql`
         query{
