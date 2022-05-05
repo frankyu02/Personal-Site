@@ -124,7 +124,7 @@ export default function RecipeDisplay({recipe}){
                     <div className="Directions">
                         <h2>Instructions</h2>
                         <ol type="1">
-                            {recipe.analyzedInstructions[0].steps?.map((step) => {
+                            {recipe.analyzedInstructions[0]?.steps?.map((step) => {
                                 return(
                                     <li>{step.step}<br /><br /></li>
                                 )
