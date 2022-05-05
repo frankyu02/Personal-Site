@@ -48,7 +48,8 @@ export default function About(){
     `)
     const info = data.allSanityAboutPage.nodes[0]
     return(
-        <Wrapper>
+        <div>
+            <Wrapper>
             <SEO title="About Me" description='Just a little about me'/>
             <SmallBanner title={info.pageTitle} ImgUrl={info.banner.asset.url} subtitle={info.subtitle} color={'black'}/>
             <AboutCard 
@@ -68,6 +69,7 @@ export default function About(){
                 imgurl={info.image3.asset.url}
             />
             <Status />
-        </Wrapper>
+            </Wrapper>
+        </div>
     )
 }
