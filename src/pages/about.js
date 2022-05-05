@@ -4,7 +4,11 @@ import SmallBanner from "../components/Global Components/SmallHero/SmallHero";
 import AboutCard from "../components/About/AboutCard";
 import Status from "../components/About/AboutStatus";
 import SEO from "../components/SEO";
+import styled from "styled-components";
 
+const Wrapper = styled.div`
+    margin-bottom: 100px;
+`
 export default function About(){
     const data = useStaticQuery(graphql`
         query{
@@ -45,6 +49,7 @@ export default function About(){
     const info = data.allSanityAboutPage.nodes[0]
     return(
         <div>
+            <Wrapper>
             <SEO title="About Me" description='Just a little about me'/>
             <SmallBanner title={info.pageTitle} ImgUrl={info.banner.asset.url} subtitle={info.subtitle} color={'black'}/>
             <AboutCard 
@@ -64,6 +69,7 @@ export default function About(){
                 imgurl={info.image3.asset.url}
             />
             <Status />
+            </Wrapper>
         </div>
     )
 }
