@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React, { useCallback, useState } from "react";
-import { SiLinkedin, SiGithub, SiDiscord } from "react-icons/si";
+import { SiLinkedin, SiGithub } from "react-icons/si";
+import { BsEnvelope } from "react-icons/bs";
 import "@fontsource/rowdies";
 import { Media, Pages, Wrapper } from "./headerStyle";
 import Hamburger from 'hamburger-react';
@@ -34,7 +35,7 @@ export default function Header(){
             <Media>
                 <a className="linkedIn" rel="noreferrer" href="https://www.linkedin.com/in/frank-yu-441213173/"target="_Blank" aria-label="save"><SiLinkedin /></a>
                 <a className="Github" rel="noreferrer" href="https://github.com/frankyu02"target="_Blank" aria-label="save"><SiGithub /></a>
-                <a className="Disc" rel="noreferrer" href="https://discordapp.com/users/Sinful#6115"target="_Blank" aria-label="save"><SiDiscord /></a>
+                <a className="Mail" rel="noreferrer" href="mailto:frankyu02@yahoo.ca"target="_Blank" aria-label="save"><BsEnvelope /></a>
             </Media>
         </Wrapper>
     )

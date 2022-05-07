@@ -37,12 +37,12 @@ const Pages = styled.div`
         text-decoration: none;
         font-size: 18px;
         font-family: "Rowdies";
-            & : visited{
+            &:visited{
                 color: #0a93c4;
             }
     }
     .linkHolder{
-        & : hover{
+        &:hover{
                 transform: rotate(-10deg);
                 transition: 0.3s;
                 a{
@@ -67,7 +67,7 @@ const Pages = styled.div`
             justify-content: center;
             border: 1px solid black;
             visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
-            & : hover{
+            &:hover{
                 transform: none;
                 a{
                     color: #0a93c4;
@@ -88,17 +88,17 @@ const Media = styled.div`
         font-size: 18px;
     }
     .linkedIn{
-        & : hover{
+        &:hover{
             color: #0a93c4;
         }
     }
     .Github{
-        & : hover{
+        &:hover{
             color: #a45abf;
         }
     }
-    .Disc{
-        & : hover{
+    .Mail{
+        &:hover{
             color: #738ADB;
         }
     }
