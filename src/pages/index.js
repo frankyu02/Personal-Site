@@ -6,7 +6,7 @@ import SEO from "../components/SEO";
 export default function home(){
   return(
     <div>
-      <SEO title="Homepage" description="Welcome to the homepage!"/>
+      <SEO title="Homepage" description="The Official Website of Frank Yu. Computer Science student @ UWaterloo!"/>
       <HomeHero />
       <Welcome />
     </div>
