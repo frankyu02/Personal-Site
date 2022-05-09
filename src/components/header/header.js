@@ -19,7 +19,7 @@ export default function Header(){
                 <Hamburger toggled={open} toggle={setOpen} size={48} duration={0.1}/>
             </div>
             <Pages isOpen={open}>
-                <div className= "linkHolder" ><Link to=".." onClick={closePage}> Home </Link></div>
+                <div className= "linkHolder" ><Link to="/" onClick={closePage}> Home </Link></div>
                 <div className= "linkHolder" ><Link to="../about " onClick={closePage}> About Me </Link></div>
                 <div className= "linkHolder" ><Link to="../project" onClick={closePage}> Projects </Link></div>
                 <div className= "linkHolder" ><Link to="../misc" onClick={closePage}> Dinner Plans </Link></div>
