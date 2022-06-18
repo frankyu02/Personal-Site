@@ -5,7 +5,7 @@ import { BsEnvelope } from "react-icons/bs";
 import "@fontsource/rowdies";
 import { Media, Pages, Wrapper } from "./headerStyle";
 import Hamburger from 'hamburger-react';
-import pdf from './resume.pdf'
+import pdf from './Resume.pdf'
 export default function Header(){
     const [open, setOpen] = useState(false);
     const closePage = useCallback(() => {
