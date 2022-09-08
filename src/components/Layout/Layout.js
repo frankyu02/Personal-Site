@@ -5,14 +5,14 @@ import Header from "../header/header";
 import GlobalStyles from "../styles/GlobalStyles";
 
 const LayoutStyled = styled.div`
-    background: #EDFDFF;
+    background: var(--background);
     position: fixed;
     z-index: -2;
     width: 100vw;
     height: 100vh;
 `;
-export default function Layout(props){
-    return(
+export default function Layout(props) {
+    return (
         <>
             <LayoutStyled />
             <GlobalStyles />

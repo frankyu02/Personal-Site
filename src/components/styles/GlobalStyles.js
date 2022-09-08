@@ -6,6 +6,11 @@ const GlobalStyles = createGlobalStyle`
         --green: #3ede89;
         --darkblue: #0c8496;
         --lightblue: rgba(237,253,255,1);
+        --background: #232946;
+        --headline: #fffffe;
+        --paragraph: #b8c1ec;
+        --button: #eebbc3;
+        --button-Text: #232946;
     }
   html {
     word-break: break-word;
@@ -17,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Source Sans Pro";
     font-size: 23px;
     margin-bottom: 25px;
+    color: var(--paragraph);
     p{
       margin: 0;
     }
