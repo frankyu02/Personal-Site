@@ -1,58 +1,60 @@
 import React from "react";
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/css";
-import "swiper/css/navigation"
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ProjectCard from "../../Templates/ProjectCard";
 
 SwiperCore.use([Navigation, Pagination]);
 
 const SwiperContainer = styled.div`
-    position: relative;
-    overflow: visible;
-    margin: 80px 0;
-    @media (max-width: 969px){
-        .swiper-button-next{
-            visibility: hidden;
-        }
-        .swiper-button-prev{
-            visibility: hidden;
-        }
+  position: relative;
+  overflow: visible;
+  margin: 80px 0;
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: black;
+  }
+  @media (max-width: 969px) {
+    .swiper-button-next {
+      visibility: hidden;
     }
+    .swiper-button-prev {
+      visibility: hidden;
+    }
+  }
 `;
 
-export default function ProjectSwiper({ projects }){
-    return(
-        <SwiperContainer>
-            <Swiper 
-                className="ProjectSwiper"
-                slidesPerView={1}
-                navigation={true}
-                pagination={{
-                    dynamicBullets: true,
-                }}
-                breakpoints={{
-                    "992":{
-                        "slidesPerView": 1.5,
-                    }
-                }}
-                >
-                    {
-                        projects?.length > 0 ? 
-                        (projects.map((project, index) => {
-                            return(
-                                <SwiperSlide
-                                    key={index}
-                                    virtualIndex={index}>
-                                        <ProjectCard project={project} />
-                                    </SwiperSlide>
-                            )
-                        })) :
-                        <div>loading projects...</div>
-                    }
-                </Swiper>
-        </SwiperContainer>
-    )
+export default function ProjectSwiper({ projects }) {
+  return (
+    <SwiperContainer>
+      <Swiper
+        className="ProjectSwiper"
+        slidesPerView={1}
+        navigation={true}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        breakpoints={{
+          992: {
+            slidesPerView: 1.5,
+          },
+        }}
+      >
+        {projects?.length > 0 ? (
+          projects.map((project, index) => {
+            return (
+              <SwiperSlide key={index} virtualIndex={index}>
+                <ProjectCard project={project} />
+              </SwiperSlide>
+            );
+          })
+        ) : (
+          <div>loading projects...</div>
+        )}
+      </Swiper>
+    </SwiperContainer>
+  );
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import HomeHero from "../components/Home/Hero";
 import Welcome from "../components/Home/Welcome";
 import SEO from "../components/SEO";
