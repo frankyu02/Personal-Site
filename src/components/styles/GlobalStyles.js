@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     word-break: break-word;
     font-size: 10px;
-    background-color: var(--lightblue);
+    background-color: var(--background);
   }
   footer{
     text-align: center;
