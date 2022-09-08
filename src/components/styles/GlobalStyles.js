@@ -40,12 +40,12 @@ const GlobalStyles = createGlobalStyle`
     }
 
     &::-webkit-scrollbar-track {
-      background: var(--lightblue);        /* color of the tracking area */
+      background: var(--background);        /* color of the tracking area */
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: var(--blue);    /* color of the scroll thumb */
-      border: 3px solid var(--darkblue);  /* creates padding around scroll thumb */
+      background-color: var(--paragraph);    /* color of the scroll thumb */
+      border: 3px solid var(--paragraph);  /* creates padding around scroll thumb */
     }
   }
   * {

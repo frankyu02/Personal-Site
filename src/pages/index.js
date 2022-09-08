@@ -7,7 +7,7 @@ export default function home() {
   return (
     <div>
       <SEO
-        title="Frank Yu - Personal Web Page"
+        title="Frank Yu - Personal Web Page. Now in Dark Mode!!"
         description="The Official Website of Frank Yu. Computer Science student @ UWaterloo!"
       />
       <HomeHero />
