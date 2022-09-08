@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 import "@fontsource/source-sans-pro";
 const GlobalStyles = createGlobalStyle`
   :root{
@@ -59,4 +59,4 @@ const GlobalStyles = createGlobalStyle`
     max-width: 1400px;
   }
 `;
-export default GlobalStyles
+export default GlobalStyles;
