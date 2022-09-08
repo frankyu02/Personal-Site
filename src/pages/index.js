@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 `;
 export default function home() {
   return (
-    <>
+    <div>
       <SEO
         title="Frank Yu - Personal Web Page"
         description="The Official Website of Frank Yu. Computer Science student @ UWaterloo!"
@@ -21,6 +21,6 @@ export default function home() {
       <Wrapper />
       <HomeHero />
       <Welcome />
-    </>
+    </div>
   );
 }
