@@ -44,6 +44,7 @@ const Pages = styled.div`
     &:hover {
       transform: scale(1.5);
       transition: 0.3s;
+      cursor: pointer;
     }
   }
   @media (max-width: 500px) {

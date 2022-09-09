@@ -74,7 +74,7 @@ export default function Welcome() {
   return (
     <div className="container">
       <Wrapper>
-        <Fade cascade>
+        <Fade cascade triggerOnce>
           <h2>{info.welcomeTitle}</h2>
           <p>{info.welcomeText}</p>
         </Fade>
